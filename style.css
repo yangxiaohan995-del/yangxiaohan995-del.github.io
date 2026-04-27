@@ -1,0 +1,396 @@
+/* Global page styling */
+:root {
+  --primary-color: #0d3b66;
+  --secondary-color: #f4a261;
+  --accent-color: #2a9d8f;
+  --light-bg: #f7f8fb;
+  --dark-text: #1f2933;
+  --muted-text: #5d6673;
+  --card-bg: #ffffff;
+  --footer-height: 56px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark-text);
+  background: var(--light-bg);
+  line-height: 1.6;
+  padding-bottom: calc(var(--footer-height) + 28px);
+}
+
+body.dark-mode {
+  --light-bg: #111827;
+  --dark-text: #f9fafb;
+  --muted-text: #cbd5e1;
+  --card-bg: #1f2937;
+  background: #111827;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+p {
+  color: var(--muted-text);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Pseudoclasses for navigation and links */
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.nav-link:hover,
+.card-link:hover {
+  color: var(--secondary-color) !important;
+}
+
+.nav-link:active,
+.card-link:active {
+  transform: translateY(1px);
+}
+
+/* ID selector requirement */
+#mainTitle {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  max-width: 900px;
+}
+
+#travelTipPanel {
+  border-left: 6px solid var(--secondary-color);
+}
+
+/* Hero section */
+.hero-section {
+  min-height: 72vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.54)), url('../images/shanghai-skyline.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  color: white;
+}
+
+.hero-content {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.hero-content p {
+  max-width: 760px;
+  color: #f3f4f6;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffe8a3;
+}
+
+.eyebrow.dark {
+  color: var(--accent-color);
+}
+
+.main-content {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Grid and flexbox layout requirements */
+.intro-grid,
+.food-layout,
+.contact-layout,
+.itinerary-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.intro-grid {
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+}
+
+.food-layout,
+.contact-layout,
+.itinerary-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.feature-list {
+  padding-left: 1.2rem;
+}
+
+.feature-list li {
+  margin-bottom: 0.5rem;
+}
+
+.section-block,
+.table-section {
+  margin-top: 3.5rem;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.attraction-grid {
+  align-items: stretch;
+}
+
+.travel-card,
+.info-box,
+.contact-card,
+.contact-sidebar,
+.interactive-panel {
+  background: var(--card-bg);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.09);
+  overflow: hidden;
+}
+
+.travel-card {
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.travel-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.16);
+}
+
+.travel-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  filter: saturate(0.92) brightness(0.95);
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.travel-card img:hover {
+  transform: scale(1.06);
+  filter: saturate(1.18) brightness(1.06);
+}
+
+.travel-card-body,
+.info-box,
+.contact-card,
+.contact-sidebar,
+.interactive-panel {
+  padding: 1.5rem;
+}
+
+.travel-card-body h2,
+.travel-card-body h3 {
+  color: var(--primary-color);
+}
+
+body.dark-mode .travel-card-body h2,
+body.dark-mode .travel-card-body h3 {
+  color: #93c5fd;
+}
+
+.card-link {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.highlight-card {
+  display: flex;
+  align-items: center;
+  border: 2px dashed var(--accent-color);
+}
+
+.page-header {
+  max-width: 840px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.food-feature img,
+.intro-image img {
+  min-height: 300px;
+  object-fit: cover;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.table-section {
+  background: var(--card-bg);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  padding: 1.5rem;
+}
+
+.schedule-table thead {
+  background: var(--primary-color);
+  color: white;
+}
+
+.info-box {
+  min-height: 260px;
+}
+
+.accent-box {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
+}
+
+.accent-box p,
+.accent-box h2,
+.accent-box li {
+  color: white;
+}
+
+.small-note {
+  margin-top: 1rem;
+  color: white;
+  font-weight: 700;
+}
+
+.interactive-panel {
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Contact form positioning requirement */
+.positioned-form {
+  position: relative;
+  padding-bottom: 2.2rem;
+}
+
+.form-message {
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+#contactPanel {
+  border-top: 5px solid var(--secondary-color);
+}
+
+.contact-sidebar {
+  align-self: start;
+}
+
+/* Fixed footer requirement */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: var(--footer-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111827;
+  color: white;
+  z-index: 999;
+  padding: 0.5rem 1rem;
+}
+
+footer p {
+  margin: 0;
+  color: white;
+  font-size: 0.95rem;
+}
+
+/* Responsive design: smartphones */
+@media (max-width: 600px) {
+  .hero-section {
+    min-height: 64vh;
+  }
+
+  .hero-buttons,
+  .interactive-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .intro-grid,
+  .food-layout,
+  .contact-layout,
+  .itinerary-grid,
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    padding-top: 2rem;
+  }
+
+  .travel-card img {
+    height: 190px;
+  }
+
+  footer p {
+    font-size: 0.82rem;
+    text-align: center;
+  }
+}
+
+/* Responsive design: tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .intro-grid,
+  .food-layout,
+  .contact-layout,
+  .itinerary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Responsive design: laptops and larger screens */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1140px;
+  }
+}
