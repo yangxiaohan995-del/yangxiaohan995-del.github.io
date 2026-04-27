@@ -1,135 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coming Soon | My Portfolio</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 30px;
-    }
-
-    .container {
-      max-width: 900px;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      padding: 40px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(6px);
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 8px 16px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.18);
-      font-size: 14px;
-      margin-bottom: 20px;
-      letter-spacing: 1px;
-    }
-
-    h1 {
-      font-size: 48px;
-      margin-bottom: 16px;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.7;
-      max-width: 700px;
-      margin: 0 auto 24px;
-    }
-
-    .highlight {
-      color: #facc15;
-      font-weight: bold;
-    }
-
-    img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 16px;
-      margin: 25px auto;
-      display: block;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 24px;
-      border-radius: 10px;
-      background: #facc15;
-      color: #111827;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .button:hover {
-      background: #fde047;
-      transform: translateY(-2px);
-    }
-
-    .footer {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #cbd5e1;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 34px;
-      }
-
-      p {
-        font-size: 16px;
-      }
-
-      .container {
-        padding: 28px 20px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shanghai Travel Guide | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="tag">COMING SOON</div>
-    <h1>My Web Development Portfolio</h1>
-    <p>
-      Welcome to my upcoming portfolio website. I am currently building a space
-      to showcase my <span class="highlight">web design</span>,
-      <span class="highlight">coding projects</span>, and
-      <span class="highlight">creative work</span>.
-    </p>
-
-    <img src="portfolio-preview.jpg" alt="Portfolio preview image" />
-
-    <p>
-      Stay tuned for a collection of projects that reflect my skills, growth,
-      and passion for web development.
-    </p>
-
-    <a href="#" class="button">Launch Coming Soon</a>
-
-    <div class="footer">
-      Created by Your Name
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Shanghai Travel Guide</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="attractions.html">Attractions</a></li>
+          <li class="nav-item"><a class="nav-link" href="food.html">Food</a></li>
+          <li class="nav-item"><a class="nav-link" href="itinerary.html">Itinerary</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </nav>
+
+  <header class="hero-section">
+    <div class="hero-overlay">
+      <div class="container hero-content">
+        <span class="eyebrow">Modern skyline · historic lanes · local food</span>
+        <h1 id="mainTitle">Explore Shanghai in Five Days</h1>
+        <p class="lead">A student-built travel website for first-time visitors who want a balanced view of Shanghai: classic landmarks, neighborhood walks, food stops, and practical travel tips.</p>
+        <div class="hero-buttons">
+          <a href="itinerary.html" class="btn btn-primary btn-lg">View 5-Day Plan</a>
+          <button id="themeToggle" class="btn btn-outline-light btn-lg" type="button">Toggle Night Mode</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="intro-grid">
+      <div class="intro-text">
+        <h2>Why visit Shanghai?</h2>
+        <p>Shanghai is one of China’s most recognizable cities because it combines riverfront architecture, modern business districts, historical neighborhoods, and a strong local food culture. The city is also easy to navigate by metro, which makes it friendly for short trips.</p>
+        <p>This website is designed as a compact guide. It does not try to list every attraction. Instead, it focuses on places and experiences that help a visitor understand the city quickly.</p>
+        <ul class="feature-list">
+          <li>Best for first-time visitors and short stays.</li>
+          <li>Includes attractions, food, and a sample itinerary.</li>
+          <li>Uses simple travel logic: morning sights, afternoon walks, evening views.</li>
+        </ul>
+      </div>
+      <div class="intro-image card shadow-sm">
+        <img src="images/shanghai-skyline.jpg" alt="Shanghai skyline at sunset" class="img-fluid rounded-top">
+        <div class="card-body">
+          <p class="card-text">Tip: The skyline looks most dramatic near sunset, especially from the Bund or across the Huangpu River.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-heading">
+        <h2>Quick Highlights</h2>
+        <p>Start with these three themes before planning the details.</p>
+      </div>
+      <div class="card-grid">
+        <article class="travel-card">
+          <img src="images/the-bund.jpg" alt="The Bund in Shanghai">
+          <div class="travel-card-body">
+            <h3>The Bund</h3>
+            <p>Shanghai’s most famous riverfront area, known for historic architecture and skyline views.</p>
+            <a href="attractions.html" class="card-link">See attractions</a>
+          </div>
+        </article>
+        <article class="travel-card">
+          <img src="images/xiaolongbao.jpg" alt="Shanghai xiaolongbao soup dumplings">
+          <div class="travel-card-body">
+            <h3>Local Food</h3>
+            <p>Try xiaolongbao, shengjianbao, scallion oil noodles, and classic Shanghainese dishes.</p>
+            <a href="food.html" class="card-link">Explore food</a>
+          </div>
+        </article>
+        <article class="travel-card">
+          <img src="images/shanghai-metro.jpg" alt="Shanghai metro station">
+          <div class="travel-card-body">
+            <h3>Easy Transport</h3>
+            <p>The metro connects most major tourist areas and is usually the easiest way to move around.</p>
+            <a href="itinerary.html" class="card-link">Plan route</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="interactive-panel" id="travelTipPanel">
+      <div>
+        <h2>Need a quick travel tip?</h2>
+        <p id="tipText">Click the button to get a practical Shanghai travel tip.</p>
+      </div>
+      <button id="tipButton" class="btn btn-warning" type="button">Show Travel Tip</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shanghai Travel Guide | Final Project Website</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
